@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Prediction</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+      
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+      
+      <link href="{{ url_for('static', filename = '../static/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+      
+      <link href="{{ url_for('static', filename = '../static/css/style.css') }}"rel="stylesheet">
+
+    </head>
+
+    <body>
+      
+      <section id="hero">
+        <div class="hero-container">
+
+
+                  <h3><strong>RESULT</strong></h3>
+            <div>
+                <section  class="main">
+                  <h3 style="color:white;" ><b>Sentimental Analysis of the sentence is </b></h3>
+            </div>
+                  {%if pred == 1 %}
+                  <h3>Positive</h3>
+                  {% elif pred == 0 %}
+                  <h3>Negative</h3>
+                  {% else %}
+                  <h3>No result</h3>
+                  {% endif %} 
+                  
+      </section>
+        
+          
+                    
+
+                      
+              <script src="{{ url_for('static', filename = '../static/vendor/jquery/jquery.min.js') }}"></script>
+              <script src="{{ url_for('static', filename = '../static/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+              <script src="{{ url_for('static', filename = '../static/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+              
+              <script src="{{ url_for('static', filename = '../static/js/main.js') }}"></script>
+
+
+
+
+
+  </body>
+
+</html>

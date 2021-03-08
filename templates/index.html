@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <style media="screen">
+  .example_e {
+                border: none;
+
+                background: #404040;
+                color: #ffffff !important;
+                font-weight: 100;
+                padding: 20px;
+                text-transform: uppercase;
+                border-radius: 6px;
+                display: inline-block;
+                transition: all 0.3s ease 0s;
+                }
+          .example_e:hover {
+                          color: #ffffff !important;
+                          font-weight: 700 !important;
+                          letter-spacing: 3px;
+                          background: #404040 !important;
+                          -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                          -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                          transition: all 0.3s ease 0s;
+                        }
+  </style>
+  <title>Twitzer</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+ 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  
+  <link href="{{ url_for('static', filename = '../static/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+  
+  <link href="{{ url_for('static', filename = '../static/css/style.css') }}"rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <section id="hero">
+    <div class="hero-container">
+
+
+
+      
+      <h3>Welcome to <strong>TWITZER</strong></h3>
+      <h1>Throw Your Sentiments Here</h1>
+      <div class="form-group">
+          <form action="{{ url_for('predict') }}" method="POST">
+          <input type="text" class="form-control" name="message" id="message" aria-describedby="helpId" placeholder="Predict my Sentiments" required="required"><br>
+                   
+          <input type="submit" name="message" value="Predict" class="example_e">
+          </form>
+      </div>
+  </section>
+
+  <script src="{{ url_for('static', filename = '../static/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = '../static/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = '../static/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+  
+  <script src="{{ url_for('static', filename = '../static/js/main.js') }}"></script>
+
+
+
+
+</body>
+
+</html>
